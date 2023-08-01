@@ -42,5 +42,11 @@ public class AnnouncementController {
 	 List<Announcement> list =service.createAnnouncementData(anoouncement);
 	 return new ResponseEntity<>(list, HttpStatus.OK);	
 	}	
+	
+	@PostMapping("updateannouncement")
+	public ResponseEntity<List<Announcement>> updateAnnouncement(@Valid @RequestBody Announcement anoouncement) {		
+	 List<Announcement> list =service.createAnnouncementData(anoouncement);
+	 return new ResponseEntity<>(list, HttpStatus.OK);	
+	}	
 
 }
